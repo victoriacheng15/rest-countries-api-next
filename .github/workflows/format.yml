@@ -1,0 +1,24 @@
+name: format
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "npm"
+      - name: install packages and run format
+        run: |
+          npm ci
+          npm run rome
+      - name: commit style change
+        uses: stefanzweifel/git-auto-commit-action@v4.16
+        with:
+          commit_message: "style: the code has been formatted!"
+          branch: ${{ github.head_ref }}
