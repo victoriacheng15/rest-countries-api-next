@@ -8,8 +8,8 @@ export default function Home() {
 		return <p>Loading...</p>;
 	}
 
-	if(error) {
-		return <p>somwthing went wrong</p>
+	if (error) {
+		return <p>somwthing went wrong</p>;
 	}
 
 	return (
@@ -18,16 +18,14 @@ export default function Home() {
 				tailwind css with nextjs
 			</h1>
 			<section>
-				{
-					countries?.slice(0,3).map((country) => (
-						<div key={country.name.common}>
-							<h2>{country.name.common}</h2>
-							<p>capital: {country.capital}</p>
-							<p>population: {country.population}</p>
-							<img src={country.flags.png} alt={country.name.common} />
-						</div>
-					))
-				}
+				{countries?.slice(0, 3).map((country) => (
+					<div key={country.name.common}>
+						<h2>{country.name.common}</h2>
+						<p>capital: {country.capital}</p>
+						<p>population: {country.population}</p>
+						<img src={country.flags.png} alt={country.name.common} />
+					</div>
+				))}
 			</section>
 		</main>
 	);
