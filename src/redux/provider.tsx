@@ -3,14 +3,12 @@
 import { setupStore } from "./store";
 import { Provider } from "react-redux";
 
-const store = setupStore()
+const store = setupStore();
 
-export function Providers({ children }: {
-  children: React.ReactNode;
+export function Providers({
+	children,
+}: {
+	children: React.ReactNode;
 }) {
-  return (
-    <Provider store={store}>
-      {children}
-    </Provider>
-  );
+	return <Provider store={store}>{children}</Provider>;
 }
