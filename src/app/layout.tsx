@@ -3,6 +3,7 @@ import { useReducer } from "react";
 import { Providers } from "../redux/provider";
 import { Lato } from "next/font/google";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import "./globals.css";
 
 const lato = Lato({
@@ -34,6 +35,7 @@ export default function RootLayout({
 			<body className={`${darkMode ? "dark" : "light"} ${lato.className}`}>
 				<Header mode={darkMode} toggleDark={setDarkMode} />
 				<Providers>{children}</Providers>
+				<Footer />
 			</body>
 		</html>
 	);
