@@ -13,7 +13,7 @@ export default function Home() {
 		setSearch,
 		selectRegion,
 		setSelectRegion,
-		reset
+		reset,
 	} = useCountries();
 
 	return (

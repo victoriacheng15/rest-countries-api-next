@@ -8,8 +8,10 @@ export function useCountries() {
 
 	const searchCountries = (query: string, queryRegion: string) => {
 		const searchLowerCase = query.toLowerCase();
-		return data?.filter(({ name: { official }, region }) =>
-			official.toLowerCase().includes(searchLowerCase) && region.includes(queryRegion)
+		return data?.filter(
+			({ name: { official }, region }) =>
+				official.toLowerCase().includes(searchLowerCase) &&
+				region.includes(queryRegion),
 		);
 	};
 
@@ -30,6 +32,6 @@ export function useCountries() {
 		setSearch,
 		selectRegion,
 		setSelectRegion,
-		reset
+		reset,
 	};
 }
