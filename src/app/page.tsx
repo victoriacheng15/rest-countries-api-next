@@ -17,7 +17,7 @@ export default function Home() {
 	} = useCountries();
 
 	return (
-		<main className="bg-slate-50 dark:bg-gray-700">
+		<main className="bg-slate-50 dark:bg-gray-700 h-[calc(100vh-108px-56px)]">
 			<div className="w-11/12 max-w-6xl mx-auto">
 				<Form
 					onClick={reset}
