@@ -8,6 +8,8 @@ export const restCountriesApi = createApi({
 	endpoints: (builder) => ({
 		getAllCountries: builder.query<Country[], void>({
 			query: () => "/all",
+			transformResponse: (response: Country[]) =>
+				response.sort((a, b) => a.name.official.localeCompare(b.name.official)),
 		}),
 	}),
 });

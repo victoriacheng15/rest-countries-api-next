@@ -1,32 +1,37 @@
 "use client";
-import { useGetAllCountriesQuery } from "../redux/services/apiSlice";
+// import { useGetAllCountriesQuery } from "../redux/services/apiSlice";
+import { useCountries } from "./hooks/useCountries";
+import CountryCard from "./components/CountryCard";
+import Form from "./components/Form";
 
 export default function Home() {
-	const { data: countries, isLoading, error } = useGetAllCountriesQuery();
-
-	if (isLoading) {
-		return <p>Loading...</p>;
-	}
-
-	if (error) {
-		return <p>somwthing went wrong</p>;
-	}
+	const {
+		data: countries,
+		isLoading,
+		error,
+		search,
+		setSearch,
+		selectRegion,
+		setSelectRegion,
+		reset,
+	} = useCountries();
 
 	return (
-		<main>
-			<h1 className="text-2xl text-blue-800 underline">
-				tailwind css with nextjs
-			</h1>
-			<section>
-				{countries?.slice(0, 3).map((country) => (
-					<div key={country.name.common}>
-						<h2>{country.name.common}</h2>
-						<p>capital: {country.capital}</p>
-						<p>population: {country.population}</p>
-						<img src={country.flags.png} alt={country.name.common} />
-					</div>
-				))}
-			</section>
+		<main className="bg-slate-50 dark:bg-gray-700">
+			<div className="w-11/12 max-w-6xl mx-auto">
+				<Form
+					onClick={reset}
+					search={search}
+					searchOnChange={(e) => setSearch(e.target.value)}
+					region={selectRegion}
+					selectOnChange={(e) => setSelectRegion(e.target.value)}
+				/>
+				<section>
+					{countries?.slice(0, 40).map((country) => (
+						<CountryCard key={country.cca3} {...country} />
+					))}
+				</section>
+			</div>
 		</main>
 	);
 }
