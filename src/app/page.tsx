@@ -17,7 +17,7 @@ export default function Home() {
 		reset,
 	} = useCountries();
 
-	const skeletons = [...Array(12).fill(0)].map((_,index) => index + 1)
+	const skeletons = [...Array(12).fill(0)].map((_, index) => index + 1);
 
 	return (
 		<main className="min-h-[calc(100vh-56px-108px)] py-16 bg-slate-50 dark:bg-gray-700">
@@ -30,7 +30,8 @@ export default function Home() {
 					selectOnChange={(e) => setSelectRegion(e.target.value)}
 				/>
 				<section className="grid grid-cols-1 gap-6 justify-items-stretch sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-					{isLoading && skeletons.map((skeleton) => (<CardSkeleton key={skeleton} />))}
+					{isLoading &&
+						skeletons.map((skeleton) => <CardSkeleton key={skeleton} />)}
 					{countries?.map((country) => (
 						<CountryCard key={country.cca3} {...country} />
 					))}
