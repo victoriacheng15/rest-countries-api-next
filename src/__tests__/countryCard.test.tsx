@@ -18,25 +18,25 @@ describe("Country Card", () => {
 	];
 	it("should render card title", () => {
 		render(<CountryCard {...country[0]} />);
-    const cardTitle = screen.getByRole("heading");
-    expect(cardTitle).toBeInTheDocument();
+		const cardTitle = screen.getByRole("heading");
+		expect(cardTitle).toBeInTheDocument();
 	});
 
-  it("should render population", () => {
+	it("should render population", () => {
 		render(<CountryCard {...country[0]} />);
-    const population = screen.getByText(/population/i);
-    expect(population).toBeInTheDocument();
+		const population = screen.getByText(/population/i);
+		expect(population).toBeInTheDocument();
 	});
 
-  it("should render region", () => {
+	it("should render region", () => {
 		render(<CountryCard {...country[0]} />);
-    const region = screen.getByText(/region/i);
-    expect(region).toBeInTheDocument();
+		const region = screen.getByText(/region/i);
+		expect(region).toBeInTheDocument();
 	});
 
-  it("should render capital", () => {
+	it("should render capital", () => {
 		render(<CountryCard {...country[0]} />);
-    const capital = screen.getByText(/capital/i);
-    expect(capital).toBeInTheDocument();
+		const capital = screen.getByText(/capital/i);
+		expect(capital).toBeInTheDocument();
 	});
 });
