@@ -1,7 +1,7 @@
 interface Country {
 	cca3: string;
 	flags: {
-		png: string;
+		svg: string;
 		alt: string;
 	};
 	alt: string;
