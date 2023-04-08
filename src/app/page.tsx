@@ -1,6 +1,6 @@
 "use client";
-// import { useGetAllCountriesQuery } from "../redux/services/apiSlice";
 import { useCountries } from "./hooks/useCountries";
+import { usePagination } from "./hooks/usePagination";
 import CountryCard from "./components/CountryCard";
 import Form from "./components/Form";
 import CardSkeleton from "./components/CardSkeleton";
@@ -17,7 +17,7 @@ export default function Home() {
 		reset,
 	} = useCountries();
 
-	const skeletons = [...Array(12).fill(0)].map((_, index) => index + 1);
+	const { total, handleLimit, skeletons } = usePagination();
 
 	return (
 		<main className="min-h-[calc(100vh-56px-108px)] py-16 bg-slate-50 dark:bg-gray-700">
@@ -32,10 +32,21 @@ export default function Home() {
 				<section className="grid grid-cols-1 gap-6 justify-items-stretch sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 					{isLoading &&
 						skeletons.map((skeleton) => <CardSkeleton key={skeleton} />)}
-					{countries?.map((country) => (
+					{countries?.slice(0, total).map((country) => (
 						<CountryCard key={country.cca3} {...country} />
 					))}
 				</section>
+				{countries !== undefined && countries.length > total && (
+					<div className="flex justify-center pt-10">
+						<button
+							type="button"
+							onClick={handleLimit}
+							className="p-2 text-lg capitalize duration-300 ease-in-out border-2 border-gray-900 w-36 rounded-xl dark:border-slate-100 dark:text-slate-100 hover:bg-gray-900 hover:text-slate-100 dark:hover:bg-slate-100 dark:hover:text-gray-900"
+						>
+							Load More
+						</button>
+					</div>
+				)}
 			</div>
 		</main>
 	);
