@@ -15,7 +15,7 @@ function Form({
 	];
 
 	return (
-		<form className="flex flex-col justify-between gap-8 py-8 md:flex-row">
+		<form className="flex flex-col justify-between gap-8 pb-10 md:flex-row">
 			<input
 				type="text"
 				name="search"
@@ -41,7 +41,7 @@ function Form({
 			<button
 				type="button"
 				onClick={onClick}
-				className="p-2 text-lg capitalize border-2 border-gray-900  w-36 rounded-xl dark:border-slate-100 dark:text-slate-100"
+				className="p-2 text-lg capitalize border-2 border-gray-900 w-36 rounded-xl dark:border-slate-100 dark:text-slate-100"
 			>
 				Clear search
 			</button>
