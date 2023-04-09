@@ -1,9 +1,9 @@
 "use client";
-import { useCountries } from "./hooks/useCountries";
-import { usePagination } from "./hooks/usePagination";
-import CountryCard from "./components/CountryCard";
-import Form from "./components/Form";
-import CardSkeleton from "./components/CardSkeleton";
+import { useCountries } from "../hooks/useCountries";
+import { usePagination } from "../hooks/usePagination";
+import CountryCard from "../components/CountryCard";
+import Form from "../components/Form";
+import CardSkeleton from "../components/CardSkeleton";
 
 export default function Home() {
 	const {
