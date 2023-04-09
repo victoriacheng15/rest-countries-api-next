@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { useGetAllCountriesQuery } from "../../redux/services/apiSlice";
+import { useGetAllCountriesQuery } from "../redux/services/apiSlice";
 
 export function useCountries() {
 	const { data, isLoading, error } = useGetAllCountriesQuery();
