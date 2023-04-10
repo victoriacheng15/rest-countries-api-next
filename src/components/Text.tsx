@@ -1,9 +1,4 @@
-import React from "react";
-
-function Text({
-	contentTitle,
-	content,
-}: { contentTitle: string; content: string }) {
+function Text({ contentTitle, content }: TextProps) {
 	return (
 		<p className="text-lg">
 			<span className="font-semibold underline capitalize">
