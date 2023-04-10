@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { useGetAllCountriesQuery } from "../redux/services/apiSlice";
+import { useGetAllCountriesQuery } from "@/redux/services/apiSlice";
 
 export function useCountries() {
 	const { data, isLoading, error } = useGetAllCountriesQuery();
@@ -19,7 +19,7 @@ export function useCountries() {
 		return searchCountries(search, selectRegion);
 	}, [data, search, selectRegion]);
 
-	function reset() {
+	function resetSearchResult() {
 		setSearch("");
 		setSelectRegion("");
 	}
@@ -32,6 +32,6 @@ export function useCountries() {
 		setSearch,
 		selectRegion,
 		setSelectRegion,
-		reset,
+		resetSearchResult,
 	};
 }
