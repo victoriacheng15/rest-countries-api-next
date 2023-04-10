@@ -34,3 +34,15 @@ interface ButtonProps extends BaseProps, BaseClasses {
 	title?: string;
 	btnText: React.ReactNode;
 }
+
+interface CountryPageProps {
+	params: {
+		code: string;
+	};
+}
+
+interface SocialIconProps {
+	href: string;
+	icon: React.ReactNode;
+	label: string;
+}

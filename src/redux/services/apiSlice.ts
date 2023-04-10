@@ -11,7 +11,7 @@ export const restCountriesApi = createApi({
 			transformResponse: (response: Country[]) =>
 				response.sort((a, b) => a.name.official.localeCompare(b.name.official)),
 		}),
-		getOneCountry: builder.query<Country, string>({
+		getOneCountry: builder.query<Country[], string>({
 			query: (code) => `/alpha/${code}`,
 		}),
 	}),
