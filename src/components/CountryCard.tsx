@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import Title from "./Title";
+import Text from "./Text";
 
 function CountryCard({
 	cca3,
@@ -14,7 +16,7 @@ function CountryCard({
 			href={`${cca3.toLowerCase()}?name=${official}`}
 			className="w-full h-full duration-300 ease-in-out sm:max-w-xs hover:scale-110"
 		>
-			<article className="h-full overflow-hidden border-2 border-gray-700 rounded-lg shadow-lg shadow-gray-900 flex-s dark:border-slate-100 dark:text-slate-300 dark:shadow-slate-500">
+			<article className="h-full overflow-hidden text-gray-900 border-2 border-gray-700 rounded-lg shadow-lg shadow-gray-900 dark:border-slate-100 dark:text-slate-300 dark:shadow-slate-500">
 				<Image
 					src={svg}
 					alt={alt ?? official}
@@ -23,19 +25,10 @@ function CountryCard({
 					className="object-cover w-full h-[180px]"
 				/>
 				<div className="p-3 space-y-4">
-					<h2 className="text-xl italic font-bold underline">{common}</h2>
-					<p>
-						<span className="text-base font-semibold">Population: </span>
-						{population.toLocaleString()}
-					</p>
-					<p>
-						<span className="text-base font-semibold">Region: </span>
-						{region}
-					</p>
-					<p>
-						<span className="text-base font-semibold">Capital: </span>
-						{capital ?? "N/A"}
-					</p>
+					<Title title={common} classes="text-xl" />
+					<Text contentTitle="population" content={population.toLocaleString()} />
+					<Text contentTitle="region" content={region} />
+					<Text contentTitle="capital" content={capital ?? "N/A"} />
 				</div>
 			</article>
 		</Link>
