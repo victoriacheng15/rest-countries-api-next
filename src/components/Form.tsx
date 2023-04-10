@@ -29,7 +29,7 @@ function Form({
 			/>
 			<select
 				name="search"
-				id="search"
+				id="select"
 				value={region}
 				onChange={selectOnChange}
 				className="p-3 bg-gray-200 w-36 md:ml-auto rounded-xl outline-dashed outline-1 focus:outline-2 focus:outline-gray-500 dark:focus:outline-slate-100"
