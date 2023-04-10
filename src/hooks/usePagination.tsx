@@ -1,20 +1,16 @@
 import { useState } from "react";
 
 export function usePagination() {
-	const [cardPerPage] = useState(12);
-	const [limit, setLimit] = useState(0);
-	const skeletons = [...Array(cardPerPage).fill(0)].map(
-		(_, index) => index + 1,
-	);
-
-	const total = cardPerPage + limit;
+	const [limit, setLimit] = useState(12);
+	const skeletons = [...Array(limit).fill(0)].map((_, index) => index + 1);
 
 	function handleLimit() {
-		setLimit((prev) => prev + cardPerPage);
+		setLimit((prevLimit) => prevLimit + 12);
 	}
 
 	return {
-		total,
+		limit,
+		setLimit,
 		handleLimit,
 		skeletons,
 	};
