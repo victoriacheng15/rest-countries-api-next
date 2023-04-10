@@ -26,7 +26,10 @@ function CountryCard({
 				/>
 				<div className="p-3 space-y-4">
 					<Title title={common} classes="text-xl" />
-					<Text contentTitle="population" content={population.toLocaleString()} />
+					<Text
+						contentTitle="population"
+						content={population.toLocaleString()}
+					/>
 					<Text contentTitle="region" content={region} />
 					<Text contentTitle="capital" content={capital ?? "N/A"} />
 				</div>

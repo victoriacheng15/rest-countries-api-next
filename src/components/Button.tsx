@@ -2,8 +2,13 @@ function Button({
 	onClick,
 	btnText,
 	title,
-  classes
-}: { onClick: () => void; btnText: React.ReactNode; title?: string; classes: string }) {
+	classes,
+}: {
+	onClick: () => void;
+	btnText: React.ReactNode;
+	title?: string;
+	classes: string;
+}) {
 	return (
 		<button
 			type="button"

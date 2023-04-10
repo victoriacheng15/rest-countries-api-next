@@ -48,7 +48,11 @@ export default function Home() {
 				</section>
 				{countries !== undefined && countries.length > limit && (
 					<div className="flex justify-center pt-10">
-						<Button onClick={handleLimit} btnText="load more" classes="p-2 text-xl" />
+						<Button
+							onClick={handleLimit}
+							btnText="load more"
+							classes="p-2 text-xl"
+						/>
 					</div>
 				)}
 			</WidthContainer>
