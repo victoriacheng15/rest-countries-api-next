@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FiMoon, FiSun } from "react-icons/fi";
+import Button from "./Button";
 
 function Header({ mode, toggleDark }: HeaderProps) {
 	const buttonText = mode ? <FiSun /> : <FiMoon />;
@@ -15,14 +16,12 @@ function Header({ mode, toggleDark }: HeaderProps) {
 						</Link>
 					</li>
 					<li>
-						<button
-							type="button"
+						<Button
 							onClick={toggleDark}
 							title={buttonTitle}
-							className="p-2 text-2xl capitalize duration-300 ease-in-out border-2 border-gray-900 rounded-xl dark:border-slate-100 dark:text-slate-100 hover:bg-gray-900 hover:text-slate-100 dark:hover:bg-slate-100 dark:hover:text-gray-900"
-						>
-							{buttonText}
-						</button>
+							btnText={buttonText}
+							classes="p-2 text-3xl"
+						/>
 					</li>
 				</ul>
 			</nav>
