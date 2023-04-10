@@ -1,7 +1,7 @@
 import { renderWithProviders as render } from "@/test-utils";
 import { screen } from "@testing-library/react";
 import user from "@testing-library/user-event";
-import Form from "@/app/components/Form";
+import Form from "@/components/Form";
 
 describe("Form component", () => {
 	const mockSearchOnChange = jest.fn();
