@@ -6,7 +6,7 @@ export function useCountries() {
 	const [search, setSearch] = useState("");
 	const [selectRegion, setSelectRegion] = useState("");
 
-	const searchCountries = (query: string, queryRegion: string) => {
+	const searchParameters = (query: string, queryRegion: string) => {
 		const searchLowerCase = query.toLowerCase();
 		return data?.filter(
 			({ name: { official }, region }) =>
@@ -16,8 +16,8 @@ export function useCountries() {
 	};
 
 	const filteredList = useMemo(() => {
-		return searchCountries(search, selectRegion);
-	}, [data, search, selectRegion]);
+		return searchParameters(search, selectRegion);
+	}, [data, search, selectRegion, searchParameters]);
 
 	function resetSearchResult() {
 		setSearch("");
