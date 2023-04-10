@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FiMoon, FiSun } from "react-icons/fi";
 import Button from "./Button";
 
-function Header({ mode, toggleDark }: HeaderProps) {
+function Header({ mode, onClick }: HeaderProps) {
 	const buttonText = mode ? <FiSun /> : <FiMoon />;
 	const buttonTitle = mode ? "light mode" : "dark mode";
 
@@ -17,7 +17,7 @@ function Header({ mode, toggleDark }: HeaderProps) {
 					</li>
 					<li>
 						<Button
-							onClick={toggleDark}
+							onClick={onClick}
 							title={buttonTitle}
 							btnText={buttonText}
 							classes="p-2 text-3xl"

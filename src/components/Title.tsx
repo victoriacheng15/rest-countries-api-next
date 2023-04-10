@@ -1,4 +1,4 @@
-function Title({ title, classes }: { title: string; classes: string }) {
+function Title({ title, classes }: TitleProps) {
 	return <h2 className={`font-extrabold italic ${classes}`}>{title}</h2>;
 }
 

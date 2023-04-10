@@ -1,14 +1,4 @@
-function Button({
-	onClick,
-	btnText,
-	title,
-	classes,
-}: {
-	onClick: () => void;
-	btnText: React.ReactNode;
-	title?: string;
-	classes: string;
-}) {
+function Button({ onClick, btnText, title, classes }: ButtonProps) {
 	return (
 		<button
 			type="button"

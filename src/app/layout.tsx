@@ -16,11 +16,7 @@ const metadata = {
 	description: "A country information app built with Next.js and Tailwind CSS",
 };
 
-export default function RootLayout({
-	children,
-}: {
-	children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: ChildrenProps) {
 	const [darkMode, setDarkMode] = useReducer(
 		(prevMode: boolean) => !prevMode,
 		false,
@@ -33,7 +29,7 @@ export default function RootLayout({
 				<title>{metadata.title}</title>
 			</head>
 			<body className={`${darkMode ? "dark" : "light"} ${lato.className}`}>
-				<Header mode={darkMode} toggleDark={setDarkMode} />
+				<Header mode={darkMode} onClick={setDarkMode} />
 				<Providers>{children}</Providers>
 				<Footer />
 			</body>
