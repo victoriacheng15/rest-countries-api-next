@@ -1,7 +1,5 @@
 "use client";
-import {
-	useGetOneCountryQuery,
-} from "@/redux/services/apiSlice";
+import { useGetOneCountryQuery } from "@/redux/services/apiSlice";
 import Image from "next/image";
 import Country from "@/components/Country";
 
@@ -13,9 +11,9 @@ function CountryPage({ params: { code } }: { params: { code: string } }) {
 			<div className="w-11/12 max-w-6xl mx-auto">
 				<section className="flex flex-col gap-8 md:flex-row">
 					{isLoading && <p>Loading...</p>}
-					{country?.map(
-						(country: Country) => (<Country {...country} />),
-					)}
+					{country?.map((country: Country) => (
+						<Country {...country} />
+					))}
 				</section>
 			</div>
 		</main>
