@@ -1,9 +1,9 @@
 "use client";
-import { useCountries } from "../hooks/useCountries";
-import { usePagination } from "../hooks/usePagination";
-import CountryCard from "../components/CountryCard";
-import Form from "../components/Form";
-import CardSkeleton from "../components/CardSkeleton";
+import { useCountries } from "@/hooks/useCountries";
+import { usePagination } from "@/hooks/usePagination";
+import CountryCard from "@/components/CountryCard";
+import Form from "@/components/Form";
+import CardSkeleton from "@/components/CardSkeleton";
 
 export default function Home() {
 	const {
@@ -14,10 +14,15 @@ export default function Home() {
 		setSearch,
 		selectRegion,
 		setSelectRegion,
-		reset,
+		resetSearchResult,
 	} = useCountries();
 
-	const { total, handleLimit, skeletons } = usePagination();
+	const { limit, setLimit, handleLimit, skeletons } = usePagination();
+
+	function reset() {
+		resetSearchResult();
+		setLimit(12);
+	}
 
 	return (
 		<main className="min-h-[calc(100vh-56px-108px)] py-16 bg-slate-50 dark:bg-gray-700">
@@ -32,11 +37,11 @@ export default function Home() {
 				<section className="grid grid-cols-1 gap-6 justify-items-stretch sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 					{isLoading &&
 						skeletons.map((skeleton) => <CardSkeleton key={skeleton} />)}
-					{countries?.slice(0, total).map((country) => (
+					{countries?.slice(0, limit).map((country) => (
 						<CountryCard key={country.cca3} {...country} />
 					))}
 				</section>
-				{countries !== undefined && countries.length > total && (
+				{countries !== undefined && countries.length > limit && (
 					<div className="flex justify-center pt-10">
 						<button
 							type="button"

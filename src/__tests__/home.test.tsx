@@ -1,6 +1,6 @@
 import { screen } from "@testing-library/react";
 import { renderWithProviders as render } from "@/test-utils";
-import Home from "../app/page";
+import Home from "@/app/page";
 
 describe("home", () => {
 	it("should render card components", async () => {

@@ -1,9 +1,9 @@
 "use client";
 import { useReducer } from "react";
-import { Providers } from "../redux/provider";
+import { Providers } from "@/redux/provider";
 import { Lato } from "next/font/google";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const lato = Lato({
