@@ -11,7 +11,7 @@ function CountryCard({
 }: Country) {
 	return (
 		<Link
-			href={`${cca3}?name=${official}`}
+			href={`${cca3.toLowerCase()}?name=${official}`}
 			className="w-full h-full duration-300 ease-in-out sm:max-w-xs hover:scale-110"
 		>
 			<article className="h-full overflow-hidden border-2 border-gray-700 rounded-lg shadow-lg shadow-gray-900 flex-s dark:border-slate-100 dark:text-slate-300 dark:shadow-slate-500">
