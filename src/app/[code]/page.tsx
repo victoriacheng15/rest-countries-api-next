@@ -1,22 +1,23 @@
 "use client";
 import { useGetOneCountryQuery } from "@/redux/services/apiSlice";
-import Image from "next/image";
 import Country from "@/components/Country";
+import MainContainer from "@/components/MainContainer";
+import WidthContainer from "@/components/WidthContainer";
 
 function CountryPage({ params: { code } }: { params: { code: string } }) {
 	const { data: country, isLoading } = useGetOneCountryQuery(code);
 
 	return (
-		<main className="min-h-[calc(100vh-56px-108px)] py-16 bg-slate-50 dark:bg-gray-700">
-			<div className="w-11/12 max-w-6xl mx-auto">
-				<section className="flex flex-col gap-8 md:flex-row">
+		<MainContainer>
+			<WidthContainer>
+				<section className="flex flex-col items-start gap-8 text-gray-900 md:flex-row dark:text-slate-100">
 					{isLoading && <p>Loading...</p>}
 					{country?.map((country: Country) => (
-						<Country {...country} />
+						<Country key={country.cca3} {...country} />
 					))}
 				</section>
-			</div>
-		</main>
+			</WidthContainer>
+		</MainContainer>
 	);
 }
 

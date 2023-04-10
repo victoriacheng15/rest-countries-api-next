@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 function Form({
 	search,
 	region,
@@ -38,13 +40,7 @@ function Form({
 					</option>
 				))}
 			</select>
-			<button
-				type="button"
-				onClick={onClick}
-				className="p-2 text-lg capitalize duration-300 ease-in-out border-2 border-gray-900 w-36 rounded-xl dark:border-slate-100 dark:text-slate-100 hover:bg-gray-900 hover:text-slate-100 dark:hover:bg-slate-100 dark:hover:text-gray-900"
-			>
-				Clear search
-			</button>
+			<Button onClick={onClick} btnText="clear search" classes="p-2 text-xl" />
 		</form>
 	);
 }
