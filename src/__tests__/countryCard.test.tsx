@@ -1,6 +1,6 @@
 import { screen } from "@testing-library/react";
 import { renderWithProviders as render } from "@/test-utils";
-import CountryCard from "@/app/components/CountryCard";
+import CountryCard from "@/components/CountryCard";
 
 describe("Country Card", () => {
 	const country = [

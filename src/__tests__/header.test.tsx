@@ -1,7 +1,7 @@
 import { renderWithProviders as render } from "@/test-utils";
 import { screen } from "@testing-library/react";
 import user from "@testing-library/user-event";
-import Header from "@/app/components/Header";
+import Header from "@/components/Header";
 
 describe("header component", () => {
 	const mode = false;
