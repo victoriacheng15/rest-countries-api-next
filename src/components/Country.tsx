@@ -56,15 +56,19 @@ function Country({
 				<Text contentTitle="languages" content={displayLangs} />
 				<h3 className="text-xl font-semibold">Borders:</h3>
 				<ul className="flex flex-wrap gap-4">
-					{borders
-						? borders.flatMap((border) => (
-								<BorderLink
-									key={border}
-									href={`/${border.toLowerCase()}?name=${getBorderName(border)}`}
-									borderName={getBorderName(border)}
-								/>
-						  ))
-						: <li><p className="text-lg">No border countries</p></li>}
+					{borders ? (
+						borders.flatMap((border) => (
+							<BorderLink
+								key={border}
+								href={`/${border.toLowerCase()}?name=${getBorderName(border)}`}
+								borderName={getBorderName(border)}
+							/>
+						))
+					) : (
+						<li>
+							<p className="text-lg">No border countries</p>
+						</li>
+					)}
 				</ul>
 			</div>
 		</>

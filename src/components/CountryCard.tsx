@@ -12,7 +12,7 @@ function CountryCard({
 	capital,
 }: Country) {
 	const population = pop.toLocaleString();
-	
+
 	return (
 		<Link
 			href={`${cca3.toLowerCase()}?name=${official}`}
