@@ -7,7 +7,7 @@ function Header({ mode, onClick }: HeaderProps) {
 	const buttonTitle = mode ? "light mode" : "dark mode";
 
 	return (
-		<header className="py-8 bg-slate-100 dark:bg-gray-800 dark:text-slate-100">
+		<header className="py-8 bg-slate-200 dark:bg-gray-800 dark:text-slate-100">
 			<nav className="w-11/12 max-w-6xl mx-auto">
 				<ul className="flex items-center justify-between">
 					<li>
