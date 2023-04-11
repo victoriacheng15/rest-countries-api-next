@@ -1,9 +1,8 @@
-import React from "react";
 import { SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
 
 function Footer() {
 	return (
-		<footer className="py-4 bg-slate-100 dark:bg-gray-800 dark:text-slate-100">
+		<footer className="py-4 bg-slate-200 dark:bg-gray-800 dark:text-slate-100">
 			<p className="flex items-center justify-center gap-2">
 				Coded by Victoria{" "}
 				<SocialIcon
