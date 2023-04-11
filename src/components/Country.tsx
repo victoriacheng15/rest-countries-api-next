@@ -2,10 +2,11 @@ import Image from "next/image";
 import { useGetAllCountriesQuery } from "@/redux/services/apiSlice";
 import Title from "./Title";
 import Text from "./Text";
+import BorderLink from "./BorderLink";
 
 function Country({
 	flags: { svg, alt },
-	name: { official, common },
+	name: { official },
 	population,
 	region,
 	subregion,
@@ -20,7 +21,7 @@ function Country({
 	function getBorderName(border: string) {
 		return countries
 			?.filter(({ cca3 }) => cca3.includes(border))
-			.map(({ name }) => name.common);
+			.map(({ name: { common } }) => common);
 	}
 
 	const displayCurrencies = currencies
@@ -57,14 +58,13 @@ function Country({
 				<ul className="flex flex-wrap gap-4">
 					{borders
 						? borders.flatMap((border) => (
-								<li
+								<BorderLink
 									key={border}
-									className="p-2 bg-gray-900 text-slate-100 dark:bg-slate-100 dark:text-gray-900"
-								>
-									{getBorderName(border)}
-								</li>
+									href={`/${border.toLowerCase()}?name=${getBorderName(border)}`}
+									borderName={getBorderName(border)}
+								/>
 						  ))
-						: "No border countries"}
+						: <li><p className="text-lg">No border countries</p></li>}
 				</ul>
 			</div>
 		</>

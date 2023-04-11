@@ -46,3 +46,8 @@ interface SocialIconProps {
 	icon: React.ReactNode;
 	label: string;
 }
+
+interface BorderLinkProps {
+	href: string;
+	borderName: React.ReactNode;
+}
