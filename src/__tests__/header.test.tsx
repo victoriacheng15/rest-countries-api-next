@@ -4,11 +4,10 @@ import user from "@testing-library/user-event";
 import Header from "@/components/Header";
 
 describe("header component", () => {
-	const mode = false;
-	const mockedMode = jest.fn((mode) => (mode === false ? false : true));
+	const mockedToggleDark = jest.fn();
 
 	beforeEach(() => {
-		render(<Header mode={mode} toggleDark={() => mockedMode} />);
+		render(<Header mode={false} onClick={mockedToggleDark} />);
 	});
 
 	it("should renders the heading", () => {
