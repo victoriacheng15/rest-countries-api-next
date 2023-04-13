@@ -4,6 +4,7 @@ export const countries = [
 		flags: {
 			svg: "https://restcountries.com/data/can.svg",
 			png: "https://restcountries.com/data/can.png",
+			alt: "Canada",
 		},
 		alt: "CA",
 		name: { common: "Canada", official: "Canada" },
@@ -34,6 +35,7 @@ export const countries = [
 		flags: {
 			svg: "https://restcountries.com/data/fra.svg",
 			png: "https://restcountries.com/data/fra.png",
+			alt: "France",
 		},
 		alt: "FR",
 		name: {
@@ -63,6 +65,7 @@ export const countries = [
 		flags: {
 			svg: "https://restcountries.com/data/chn.svg",
 			png: "https://restcountries.com/data/chn.png",
+			alt: "China",
 		},
 		alt: null,
 		name: {
@@ -102,5 +105,39 @@ export const countries = [
 			"TJK",
 			"VNM",
 		],
+	},
+];
+
+export const country = [
+	{
+		cca3: "CAN",
+		flags: {
+			svg: "https://restcountries.com/data/can.svg",
+			png: "https://restcountries.com/data/can.png",
+			alt: "Canada",
+		},
+		alt: "CA",
+		name: { common: "Canada", official: "Canada" },
+		population: "38246108",
+		region: "Americas",
+		capital: "Ottawa",
+		subregion: "Northern America",
+		tld: [".ca"],
+		currencies: {
+			CAD: {
+				name: "Canadian dollar",
+			},
+		},
+		languages: {
+			eng: {
+				name: "English",
+				nativeName: "English",
+			},
+			fra: {
+				name: "French",
+				nativeName: "français",
+			},
+		},
+		borders: ["USA"],
 	},
 ];
