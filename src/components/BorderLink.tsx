@@ -5,7 +5,7 @@ function BorderLink({ href, borderName }: BorderLinkProps) {
 		<li>
 			<Link
 				href={href}
-				className="p-3 font-semibold duration-300 ease-in-out bg-gray-900 text-slate-100 dark:bg-slate-100 dark:text-gray-900 hover:rounded-xl"
+				className="p-2 font-semibold duration-300 ease-in-out bg-gray-900 text-slate-100 dark:bg-slate-100 dark:text-gray-900 hover:rounded-lg"
 			>
 				{borderName}
 			</Link>

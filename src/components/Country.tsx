@@ -48,9 +48,9 @@ function Country({
 			<div className="space-y-4">
 				<Title title={official} classes="text-4xl" />
 				<Text contentTitle="population" content={population.toLocaleString()} />
-				<Text contentTitle="region" content={region} />
-				<Text contentTitle="sub region" content={subregion} />
-				<Text contentTitle="capital" content={capital} />
+				<Text contentTitle="region" content={region ?? "N/A"} />
+				<Text contentTitle="sub region" content={subregion ?? "N/A"} />
+				<Text contentTitle="capital" content={capital ?? "N/A"} />
 				<Text contentTitle="top level domain" content={tld.join(" | ")} />
 				<Text contentTitle="currencies" content={displayCurrencies} />
 				<Text contentTitle="languages" content={displayLangs} />

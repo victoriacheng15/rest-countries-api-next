@@ -30,7 +30,10 @@ function CountryCard({
 					<Title title={common} classes="text-xl" />
 					<Text contentTitle="population" content={population} />
 					<Text contentTitle="region" content={region} />
-					<Text contentTitle="capital" content={capital ?? "N/A"} />
+					<Text
+						contentTitle="capital"
+						content={capital.length ? capital : "N/A"}
+					/>
 				</div>
 			</article>
 		</Link>
