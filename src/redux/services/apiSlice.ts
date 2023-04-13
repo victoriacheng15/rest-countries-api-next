@@ -9,7 +9,7 @@ export const restCountriesApi = createApi({
 		getAllCountries: builder.query<Country[], void>({
 			query: () => "/all",
 			transformResponse: (response: Country[]) =>
-				response.sort((a, b) => a.name.official.localeCompare(b.name.official)),
+				response.sort((a, b) => a.name.common.localeCompare(b.name.common)),
 		}),
 		getOneCountry: builder.query<Country[], string>({
 			query: (code) => `/alpha/${code}`,
