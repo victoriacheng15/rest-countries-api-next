@@ -1,38 +1,98 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# REST Countries API - Nextjs version
 
-## Getting Started
+This is 3rd version of the rest countries API with Nextjs, you could see the previous 2 versions:
 
-First, run the development server:
+- [rest-countries-api-ts](https://github.com/victoriacheng15/rest-countries-api-ts#readme)
+- [fem-rest-countries-api](https://github.com/victoriacheng15/fem-rest-countries-api#readme)
+
+The previous 2 versions were built using TypeScript and JavaScript respectively, with React, and Tailwind CSS being used in both cases. The state management in the TypeScript version was handled through the use of React Hooks such as `useContext`, `useReducer` and `useMemo`.
+
+The current version, on the other hand, is built using `Nextjs` and `Redux Toolkit Query`. Additionally, the current version included a couple of new features and improvements that were not present in the previous versions.
+
+In terms of functionality, all three versions share the same core features: a search box for users to search for specific countries and a dropdown menu that enables them to filter countries based on regions. Users can also click on a country to view more detailed information about it.
+
+**New features/improvement**
+
+- Users now can search countries based on the text and region
+- Implement skeleton layout to minimize layout shifts while fetching the API
+- A clear search button to reset the search box, region and cards per page limit (to 9)
+- A small window to display country cards, allows users to click the load more button to view more countries if available without or minimize the need to scroll up
+
+The user should be able to:
+
+- [x] Display a list of all countries fetched from the API on the homepage, along with a `Load More` button to load more countries if available
+- [x] Provide a dropdown menu to filter countries by region, and a search box to search countries by text
+- [x] Include a `Clear Search` button to clear the search results and display all countries again
+- [x] Allow users to click on a country card to view more detailed information about the country on a separate page
+- [x] Enable users to navigate to the bordering countries of a selected country on the detail page
+- [x] Provide a toggle switch to switch between light and dark color schemes for the user interface
+
+[View the site live here](https://rest-countries-api-next-redux.vercel.app/)
+
+## Tech stack:
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white) ![Nextjs](https://img.shields.io/badge/Next.js-000000.svg?style=for-the-badge&logo=nextdotjs&logoColor=white) ![Redux](https://img.shields.io/badge/Redux-764ABC.svg?style=for-the-badge&logo=Redux&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4.svg?style=for-the-badge&logo=Tailwind-CSS&logoColor=white) ![Testing Library](https://img.shields.io/badge/Testing%20Library-E33332.svg?style=for-the-badge&logo=Testing-Library&logoColor=white) ![Jest](https://img.shields.io/badge/Jest-C21325.svg?style=for-the-badge&logo=Jest&logoColor=white)
+
+## Screenshots/GIFs
+
+<details close>
+<summary>Overall and theme toggle demo</summary>
+
+https://user-images.githubusercontent.com/35031228/231864856-f6c2476b-4691-4f74-ad55-6d58efe44afe.mp4
+
+</details>
+
+<hr />
+
+<details close>
+<summary>Search countries by search box and/or region</summary>
+
+https://user-images.githubusercontent.com/35031228/231864854-55977c0b-c2e9-42f7-a55b-c02e623096e2.mp4
+
+</details>
+
+<hr />
+
+<details close>
+<summary>Load More and Clear Search button</summary>
+
+https://user-images.githubusercontent.com/35031228/231864848-0a229fba-21d6-4b42-9611-44dd0d703e8e.mp4
+
+</details>
+
+<hr />
+
+## Installation
+
+```bash
+git clone git@github.com:victoriacheng15/rest-countries-api-next.git
+```
+
+```bash
+cd rest-countries-api-next
+```
+
+```bash
+npm install
+# or your preference of package manager
+```
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## What I learned
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+WIP
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+**Nextjs - app directory**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+**Redux Toolkit Query**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Continued development
 
-## Learn More
+WIP
 
-To learn more about Next.js, take a look at the following resources:
+## Author
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2.svg?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/victoriacheng15/) [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/viktoriacheng15)
