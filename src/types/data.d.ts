@@ -4,7 +4,6 @@ interface Country {
 		svg: string;
 		alt: string;
 	};
-	alt: string;
 	name: {
 		common: string;
 		official: string;
