@@ -6,8 +6,8 @@ import { country } from "@/mocks/mockedData";
 describe("Country Card", () => {
 	beforeEach(() => {
 		render(<CountryCard {...country[0]} />);
-	})	
-	
+	});
+
 	it("should render card title", () => {
 		const cardTitle = screen.getByRole("heading");
 		expect(cardTitle).toBeInTheDocument();

@@ -6,7 +6,7 @@ import { country } from "@/mocks/mockedData";
 describe("CountryPage", () => {
 	beforeEach(() => {
 		render(<Country {...country[0]} />);
-	})
+	});
 	it("should render title as country official name", () => {
 		const title = screen.getByRole("heading", { level: 2 });
 		expect(title).toBeInTheDocument();
