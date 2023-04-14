@@ -83,15 +83,19 @@ npm run dev
 
 ## What I learned
 
-WIP
-
 **Nextjs - app directory**
+
+The app directory in Nextjs is a directory that contains all the files that are necessary to configure and run your app. I think one of the advantages of using the app directory is that it allows you to organize your routes and nested routes more intuitively.
 
 **Redux Toolkit Query**
 
+RTK Query is a tool that is similar to RTK, but with the added benefit of completely managing the data fetching process, eliminating the need to write `useEffect` hooks. One feature that I find particularly useful is that RTKQ allows you to provide a base URL and define multiple endpoints to fetch specific information required by the application.
+
+In my project, I gave the base URL to RTKQ and added two different endpoints. The first endpoint was used to fetch all countries, while the second endpoint was used to fetch a single country based on its code. This simplified the code and eliminated the need to write async/await functions within the `useEffect` block.
+
 ### Continued development
 
-WIP
+The app directory in Next.js is currently in an experimental phase, meaning that it is not yet considered a stable feature. As a result, there may still be changes made to this feature before it becomes stable. Therefore, I am keeping an eye out for any potential changes that could affect my application's functionality. Once the feature is stable, it should be safe to use without any major concerns about breakages.
 
 ## Author
 
