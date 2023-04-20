@@ -2,15 +2,14 @@
 import { useGetOneCountryQuery } from "@/redux/services/apiSlice";
 import Link from "next/link";
 import Country from "@/components/Country";
-import MainContainer from "@/components/MainContainer";
-import WidthContainer from "@/components/WidthContainer";
+import Layout from "@/components/Layout";
 
 function CountryPage({ params: { code } }: CountryPageProps) {
 	const { data: country, isLoading } = useGetOneCountryQuery(code);
 
 	return (
-		<MainContainer>
-			<WidthContainer>
+		<Layout>
+			<Layout isMain={false}>
 				<Link
 					href="/"
 					className="p-4 text-lg font-semibold duration-300 ease-in-out bg-gray-900 hover:rounded-2xl text-slate-100 dark:bg-slate-100 dark:text-gray-900"
@@ -23,8 +22,8 @@ function CountryPage({ params: { code } }: CountryPageProps) {
 						<Country key={country.cca3} {...country} />
 					))}
 				</section>
-			</WidthContainer>
-		</MainContainer>
+			</Layout>
+		</Layout>
 	);
 }
 
