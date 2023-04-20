@@ -1,8 +1,8 @@
-import Image from "next/image";
 import { useGetAllCountriesQuery } from "@/redux/services/apiSlice";
 import Title from "./Title";
 import Text from "./Text";
 import BorderLink from "./BorderLink";
+import ImageContainer from "./ImageContainer";
 
 function Country({
 	flags: { svg, alt },
@@ -38,11 +38,9 @@ function Country({
 
 	return (
 		<>
-			<Image
+			<ImageContainer
 				src={svg}
 				alt={alt ?? official}
-				width={1600}
-				height={800}
 				className="w-full max-w-2xl md:w-1/2"
 			/>
 			<div className="space-y-4">

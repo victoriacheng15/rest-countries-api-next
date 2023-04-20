@@ -1,12 +1,11 @@
 "use client";
 import { useCountries } from "@/hooks/useCountries";
 import { usePagination } from "@/hooks/usePagination";
-import MainContainer from "@/components/MainContainer";
-import WidthContainer from "@/components/WidthContainer";
 import CountryCard from "@/components/CountryCard";
 import Form from "@/components/Form";
 import CardSkeleton from "@/components/CardSkeleton";
 import Button from "@/components/Button";
+import Layout from "@/components/Layout";
 
 export default function Home() {
 	const {
@@ -31,8 +30,8 @@ export default function Home() {
 		isLoading && skeletons.map((skeleton) => <CardSkeleton key={skeleton} />);
 
 	return (
-		<MainContainer>
-			<WidthContainer>
+		<Layout>
+			<Layout isMain={false}>
 				<Form
 					onClick={reset}
 					search={search}
@@ -55,7 +54,7 @@ export default function Home() {
 						/>
 					</div>
 				)}
-			</WidthContainer>
-		</MainContainer>
+			</Layout>
+		</Layout>
 	);
 }

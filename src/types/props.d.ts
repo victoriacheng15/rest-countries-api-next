@@ -51,3 +51,15 @@ interface BorderLinkProps {
 	href: string;
 	borderName: React.ReactNode;
 }
+
+interface ImageContainerProps {
+	src: string;
+	alt: string;
+	width?: number;
+	height?: number;
+	className?: string;
+}
+
+interface LayoutProps extends ChildrenProps {
+	isMain?: boolean;
+}
