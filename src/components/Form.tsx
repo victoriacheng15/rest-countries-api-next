@@ -14,7 +14,7 @@ function Form({
 				id="search"
 				name="search"
 				type="text"
-				placeholder='search for a country...'
+				placeholder="search for a country..."
 				value={search}
 				onChange={searchOnChange}
 				className="w-full p-3 placeholder-gray-600 bg-gray-200 rounded-xl md:w-96 outline-dashed outline-1 focus:outline-2 focus:outline-gray-500 dark:focus:outline-slate-100"
