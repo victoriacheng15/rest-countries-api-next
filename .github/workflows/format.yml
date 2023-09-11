@@ -18,7 +18,7 @@ jobs:
       - name: install packages and run format
         run: |
           npm ci
-          npm run biome
+          npm run format
       - name: commit style change
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
