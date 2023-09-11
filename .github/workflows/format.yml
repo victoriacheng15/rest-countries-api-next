@@ -11,7 +11,6 @@ jobs:
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
-          token: ${{ secrets.PAT }}
       - uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -19,7 +18,7 @@ jobs:
       - name: install packages and run format
         run: |
           npm ci
-          npm run rome
+          npm run format
       - name: commit style change
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
